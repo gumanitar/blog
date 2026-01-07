@@ -3,30 +3,31 @@ import type { KeyboardEvent } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { TextField, InputAdornment, Typography, Box } from "@mui/material";
 
+import { useSearchStore } from "../stores/searchStore";
+
 type FilterBoxProps = {
-  value: string;
-  onChange: (value: string) => void;
-  onKeyDown?: (e: KeyboardEvent<HTMLDivElement | HTMLInputElement>) => void;
   resultsCount?: number;
 };
 
-export default function FilterBox({
-  value,
-  onChange,
-  resultsCount,
-  onKeyDown,
-}: FilterBoxProps) {
+export default function FilterBox({ resultsCount }: FilterBoxProps) {
+  const { input, setInput, setQuery } = useSearchStore();
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (e.key === "Enter") {
+      setQuery(input);
+    }
+  };
+
   return (
     <Box className="filterBox">
       <Typography>Filter by keywords</Typography>
 
       <TextField
-        sx={{width: "600px"}}
+        sx={{ width: "600px" }}
         hiddenLabel
         size="small"
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        onKeyDown={onKeyDown}
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        onKeyDown={handleKeyDown}
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
@@ -36,9 +37,7 @@ export default function FilterBox({
         }}
       />
 
-      <Typography>
-        Results: {resultsCount}
-      </Typography>
+      <Typography>Results: {resultsCount}</Typography>
     </Box>
   );
 }
