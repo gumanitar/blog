@@ -1,0 +1,54 @@
+@use "./_mixins" as mixins;
+
+.previewContainer {
+  @include mixins.flex-center-column();
+  max-width: 400px;
+  height: 530px;
+}
+
+.articleContainer {
+  @include mixins.flex-center-column();
+  padding: 3rem;
+  margin: 6rem 0 1rem;
+}
+
+.articleListContainer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(400px, 400px));
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.MuiTypography-root.article__title {
+  @include mixins.title();
+  height: 4rem;
+  margin: 1rem 0;
+}
+.article {
+  &__media {
+    height: 200px;
+  }
+
+  &__summary {
+    @include mixins.text(16px);
+  }
+  &__text {
+    @include mixins.text($size: 18px);
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__publishedAt {
+    @include mixins.text($size: 14px);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &--highlight {
+    background-color: #fff59d;
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+}

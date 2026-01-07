@@ -3,14 +3,6 @@
 :root {
   --article-text-color: #363636;
   --article-bottom: #EAEAEA;
-    --font-weight-regular: 400;
-  --font-size-title: 24px;
-  --font-size-body: 16px;
-  --font-size-small: 14px;
-  --line-height-title: 100%;
-  --line-height-body: 150%;
-  --spacing-lg: 3rem;
-  --spacing-xl: 6rem;
 }
 
 * {
@@ -23,35 +15,11 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.app{
-  margin: 0 auto 3rem;
-  width: 90%;
-  max-width: 1290px;
-}
 
-.filterBox{
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 100%;
-  margin: 2rem 0;
-  color: var(--article-text-color);
-  border-bottom: 1px solid var(--article-bottom);
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 1rem;
-}
 
-.filterBox input{
-  width: 600px;
-}
 
-.notFoundContainer{
-  display:flex;
-    flex-direction: column;
-      align-items:center;
-      justify-content:center;
-      height:50vh;
-      text-align:center;
-     
-}
+
+
+
+
+

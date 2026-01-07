@@ -2,18 +2,17 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-
 import Typography from "@mui/material/Typography";
-
-import styles from "../../styles/article.module.scss";
-import clsx from "clsx";
+import { Box } from "@mui/material";
 
 import type { ArticleInterface } from "../../interfaces/ArticleInterface";
-import { highlightWords } from "../../utils/highlight";
+
 import NavButton from "../NavButton";
-import { Box } from "@mui/material";
 import PublishedAt from "./PublishedAt";
+
+import { highlightWords } from "../../utils/highlight";
 import { useTruncatedText } from "../../hooks/useTruncatedText";
+
 interface ArticlePreviewProps {
   article: ArticleInterface;
   search?: string;
@@ -26,12 +25,9 @@ export default function ArticlePreview({
   const summary = useTruncatedText(article.summary);
 
   return (
-    <Card
-      key={article.id}
-      className={clsx(styles.article, styles.previewContainer)}
-    >
+    <Card key={article.id} className="article prewievContainer">
       <CardMedia
-        className={styles.media}
+        className="article__media"
         image={article.image_url}
         title={article.image_url}
       />
@@ -39,23 +35,23 @@ export default function ArticlePreview({
         <Box>
           <Typography variant="body2">
             <PublishedAt
-              className={styles.publishedAt}
+              className="article__publishedAt"
               date={article.published_at}
             />
           </Typography>
 
-          <Typography variant="h2" className={styles.title}>
-            {highlightWords(article.title, search, styles.highlight)}
+          <Typography variant="h2" className="article__title">
+            {highlightWords(article.title, search, "article--highlight")}
           </Typography>
         </Box>
       </CardContent>
 
       <CardContent>
-        <Typography variant="body2" className={styles.summary}>
-          {highlightWords(summary, search, styles.highlight)}
+        <Typography variant="body2" className="article__summary">
+          {highlightWords(summary, search, "article--highlight")}
         </Typography>
       </CardContent>
-      <CardActions className={styles.actions}>
+      <CardActions >
         <NavButton
           label="Read more"
           to={`article/${article.id}`}

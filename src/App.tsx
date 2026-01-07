@@ -1,6 +1,6 @@
 import Router from "./routes/Router.tsx";
 
-import "./styles/global.scss";
+import "./styles/index.scss";
 
 export default function App() {
   return (

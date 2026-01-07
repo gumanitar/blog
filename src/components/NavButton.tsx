@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom";
+
 import Button from "@mui/material/Button";
-import styles from "../styles/navButton.module.scss";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+
+import styles from "../styles/buttons.module.scss";
 
 interface NavButtonProps {
   to: string;

@@ -1,7 +1,6 @@
 import { Card, Typography } from "@mui/material";
+
 import { type ArticleInterface } from "../../interfaces/ArticleInterface";
-import styles from "../../styles/article.module.scss";
-import clsx from "clsx";
 import ArticleText from "./ArticleText";
 
 interface ArticleListProps {
@@ -10,11 +9,11 @@ interface ArticleListProps {
 
 export default function Article({ article }: ArticleListProps) {
   return (
-    <Card className={clsx(styles.article, styles.articleContainer)}>
-      <Typography variant="h1" className={styles.title}>
+    <Card className="article articleContainer">
+      <Typography variant="h1" className="article__title">
         {article.title}
       </Typography>
-      <Typography className={styles.text}>
+      <Typography className="article__text">
         <ArticleText />
       </Typography>
     </Card>

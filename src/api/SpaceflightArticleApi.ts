@@ -2,6 +2,7 @@ import SpaceflightApi from "./SpaceflightApi";
 import { type AxiosRequestConfig } from "axios";
 import type { ArticleInterface } from "../interfaces/ArticleInterface";
 import type { ArticleListInterface } from "../interfaces/ArticleListInterface";
+
 class SpaceflightArticleApi extends SpaceflightApi {
   private static readonly endpoint: string = "articles";
 
@@ -17,7 +18,6 @@ class SpaceflightArticleApi extends SpaceflightApi {
 
       return response;
     } catch (error) {
-      console.error("Error fetching articles:", error);
       throw error;
     }
   }
@@ -33,7 +33,6 @@ class SpaceflightArticleApi extends SpaceflightApi {
       );
       return response;
     } catch (error) {
-      console.error("Error fetching article:", error);
       throw error;
     }
   }

@@ -1,0 +1,20 @@
+@mixin text($size: 18px, $font-weight: 400) {
+  font-size: $size;
+  line-height: 150%;
+  font-weight: $font-weight;
+  color: var(--article-text-color);
+}
+
+@mixin title() {
+  font-size: 24px;
+  line-height: 100%;
+  font-weight: 400;
+  color: var(--article-text-color);
+}
+
+@mixin flex-center-column($align-items: center) {
+  display: flex;
+  flex-direction: column;
+  align-items: $align-items;
+  justify-content: center;
+}

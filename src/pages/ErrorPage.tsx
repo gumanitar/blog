@@ -5,7 +5,7 @@ export default function ErrorPage() {
   const navigate = useNavigate();
 
   return (
-    <Box className="notFoundContainer">
+    <Box className="infoBox">
       <Typography variant="h4" mb={2}>
         Unexpected Error
       </Typography>

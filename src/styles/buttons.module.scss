@@ -1,0 +1,7 @@
+@use './_mixins' as mixins;
+
+.navButton.navButton{
+  @include mixins.text( 16px, 700);
+  text-transform: capitalize;
+  
+}

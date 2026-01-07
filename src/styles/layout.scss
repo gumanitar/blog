@@ -1,0 +1,32 @@
+@use "./_mixins" as mixins;
+
+.app {
+  margin: 0 auto 3rem;
+  width: 90%;
+  max-width: 1290px;
+}
+
+.filterBox {
+  @include mixins.text($size: 16px, $font-weight: 700);
+  @include mixins.flex-center-column(start);
+  margin: 2rem 0;
+  border-bottom: 1px solid var(--article-bottom);
+  width: 100%;
+  gap: 1rem;
+}
+
+.infoBox {
+  @include mixins.flex-center-column();
+  height: 50vh;
+}
+
+.banner {
+  width: 100vw;
+  height: 245px;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover;
+}

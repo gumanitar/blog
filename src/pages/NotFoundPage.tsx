@@ -5,7 +5,7 @@ export default function NotFoundPage() {
   const navigate = useNavigate();
 
   return (
-    <Box className="notFoundContainer">
+    <Box className="infoBox">
       <Typography variant="h1" fontSize={100} fontWeight="bold">
         404
       </Typography>

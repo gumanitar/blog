@@ -1,6 +1,7 @@
-import { TextField, InputAdornment, Typography, Box } from "@mui/material";
 import type { KeyboardEvent } from "react";
+
 import SearchIcon from "@mui/icons-material/Search";
+import { TextField, InputAdornment, Typography, Box } from "@mui/material";
 
 type FilterBoxProps = {
   value: string;
@@ -17,9 +18,10 @@ export default function FilterBox({
 }: FilterBoxProps) {
   return (
     <Box className="filterBox">
-      <Typography variant="subtitle2">Filter by keywords</Typography>
+      <Typography>Filter by keywords</Typography>
 
       <TextField
+        sx={{width: "600px"}}
         hiddenLabel
         size="small"
         value={value}
@@ -34,7 +36,7 @@ export default function FilterBox({
         }}
       />
 
-      <Typography variant="caption">
+      <Typography>
         Results: {resultsCount}
       </Typography>
     </Box>

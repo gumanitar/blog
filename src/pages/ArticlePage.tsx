@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+
 import NavButton from "../components/NavButton";
 import { useArticle } from "../hooks/useArticle";
 import Article from "../components/article/Article";
