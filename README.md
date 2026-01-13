@@ -1,53 +1,53 @@
 # Blog SPA - Spaceflight News Reader
 
-A single-page application for browsing and reading articles. Built with React, TypeScript, and powered by the [Spaceflight News API](https://spaceflightnewsapi.net/).
+[A single-page application for browsing and reading articles](https://relaxed-snickerdoodle-9ca057.netlify.app/ ). Built with React, TypeScript, and powered by the [Spaceflight News API](https://spaceflightnewsapi.net/).
 
 ## Project Structure
 
 ```
 src/
 ├── api/
-│   ├── apiClient.ts           # Base Axios client
-│   ├── SpaceflightApi.ts      # Spaceflight API base
-│   └── SpaceflightArticleApi.ts # Article endpoints
+│   ├── apiClient.ts           
+│   ├── SpaceflightApi.ts      
+│   └── SpaceflightArticleApi.ts 
 ├── components/
 │   ├── article/
-│   │   ├── Article.tsx        # Full article view
-│   │   ├── ArticlesList.tsx   # List of articles
-│   │   ├── ArticlePreview.tsx # Article preview card
-│   │   ├── ArticleText.tsx    # Article body
-│   │   └── PublishedAt.tsx    # Date formatter
-│   ├── Banner.tsx             # Top banner
-│   ├── FilterBox.tsx          # Search filter UI
-│   ├── NavButton.tsx          # Navigation button
-│   └── NotFound.tsx           # 404 message
+│   │   ├── Article.tsx        
+│   │   ├── ArticlesList.tsx   
+│   │   ├── ArticlePreview.tsx 
+│   │   ├── ArticleText.tsx    
+│   │   └── PublishedAt.tsx    
+│   ├── Banner.tsx             
+│   ├── FilterBox.tsx         
+│   ├── NavButton.tsx          
+│   └── NotFound.tsx           
 ├── hooks/
-│   ├── useArticles.ts         # Fetch articles list (React Query)
-│   ├── useArticle.ts          # Fetch single article (React Query)
-│   ├── useFormattedDate.ts    # Date formatting utility
-│   └── useTruncatedText.ts    # Text truncation utility
+│   ├── useArticles.ts         
+│   ├── useArticle.ts          
+│   ├── useFormattedDate.ts   
+│   └── useTruncatedText.ts    
 ├── interfaces/
-│   ├── ArticleInterface.ts    # Article type definition
-│   └── ArticleListInterface.ts # Articles list response type
+│   ├── ArticleInterface.ts    
+│   └── ArticleListInterface.ts 
 ├── pages/
-│   ├── Home.tsx               # Homepage with article list
-│   ├── ArticlePage.tsx        # Single article page
-│   ├── ErrorPage.tsx          # Error state
-│   └── NotFoundPage.tsx       # 404 page
+│   ├── Home.tsx               
+│   ├── ArticlePage.tsx        
+│   ├── ErrorPage.tsx          
+│   └── NotFoundPage.tsx     
 ├── routes/
-│   └── Router.tsx             # Route configuration
+│   └── Router.tsx             
 ├── stores/
-│   ├── blogStore.tsx          # Main Zustand store (UI state)
-│   └── searchStore.tsx        # Search query state
+│   ├── blogStore.tsx          
+│   └── searchStore.tsx        
 ├── styles/
-│   ├── global.scss            # Global styles & fonts
-│   ├── article.module.scss    # Article component styles
-│   ├── banner.module.scss     # Banner styles
-│   └── navButton.module.scss  # Button styles
+│   ├── global.scss           
+│   ├── article.module.scss   
+│   ├── banner.module.scss     
+│   └── navButton.module.scss  
 ├── utils/
-│   └── highlight.tsx          # Text highlighting utility
-├── App.tsx                    # Root component
-└── main.tsx                   # React root & providers setup
+│   └── highlight.tsx          
+├── App.tsx                    
+└── main.tsx                  
 ```
 
 ### Environment Variables
